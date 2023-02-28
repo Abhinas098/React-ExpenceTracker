@@ -1,14 +1,16 @@
-import "./ExpenceItem.css";
+import React from "react";
+import "./ExpenseItem.css";
 import ExpenseDate from './ExpenseDate.js';
 import ExpenseDetails from "./ExpenseDetails";
+import Card from "../UI/Card";
 
-function ExpenceItem(props) {
+const ExpenseItem =(props)=> {
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate date={props.Date} />
       <ExpenseDetails title={props.Title} amount={props.Amount} />
-    </div>
+    </Card>
   );
 }
 
-export default ExpenceItem;
+export default ExpenseItem;
