@@ -38,9 +38,12 @@ const App =() => {
           <ExpenseItem
             Title={expense.title}
             Date={(expense.date)}
-            Amount={expense.amount}></ExpenseItem>
+            Amount={expense.amount}>
+            </ExpenseItem>
+            
         );
       })}
+      
     </Card>
   );
 }
