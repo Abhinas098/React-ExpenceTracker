@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import ExpenseItem from "./Components/Expenses/ExpenseItem";
 import Card from "./Components/UI/Card";
+import NewExpense from './Components/NewExpenses/NewExpense';
 
 const App =() => {
   const expense = [
@@ -33,14 +34,18 @@ const App =() => {
 
   return (
     <Card className='expenses '>
-      {expense.map((expense) => {
+      <NewExpense/>
+      
+      {expense.map((expense,ind) => {
         return (
+          <div key ={ind}>
+
           <ExpenseItem
             Title={expense.title}
             Date={(expense.date)}
             Amount={expense.amount}>
             </ExpenseItem>
-            
+            </div>    
         );
       })}
       
