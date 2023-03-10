@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
-import ExpenseItem from "./Components/Expenses/ExpenseItem";
+import Expenses from "./Components/Expenses/Expenses";
 import Card from "./Components/UI/Card";
-import NewExpense from './Components/NewExpenses/NewExpense';
+import NewExpense from "./Components/NewExpenses/NewExpense";
 
-const App =() => {
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -32,32 +32,17 @@ const App =() => {
     },
   ];
 
-  const addExpenseHandler = (expense) =>{
-
-    console.log('In App.js')
-    console.log(expense)
-
-  }
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
 
   return (
-    <Card  className='expenses '>
-      <NewExpense onAddExpense= {addExpenseHandler}/>
-      
-      {expenses.map((expenses,ind) => {
-        return (
-          <div key ={ind}>
-          <ExpenseItem
-            Title={expenses.title}
-            Date={(expenses.date)}
-            Amount={expenses.amount}>
-            </ExpenseItem>
-            </div>    
-        );
-      })}
-      
+    <Card className="expenses ">
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses} />
     </Card>
-    
   );
-}
+};
 
 export default App;
