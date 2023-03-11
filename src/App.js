@@ -15,13 +15,13 @@ const dummyexpenses = [
     id: "e2",
     title: "New TV",
     amount: 7000,
-    date: new Date(2023, 2, 12),
+    date: new Date(2020, 2, 12),
   },
   {
     id: "e3",
     title: "Car Insurance",
     amount: 500,
-    date: new Date(2023, 2, 28),
+    date: new Date(2020, 2, 28),
   },
   {
     id: "e4",
@@ -37,7 +37,6 @@ const App = () => {
   const addExpenseHandler = (expense) => {
     setExpenses((prevexpense) => {
       return [expense, ...prevexpense];
-      
     });
   };
 
