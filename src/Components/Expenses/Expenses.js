@@ -20,13 +20,13 @@ const Expenses = (props) => {
           onChangeFilter={filterChangeHandler}
         />
 
-        {props.items.map((expenses, ind) => {
+        {props.items.map((expense) => {
           return (
-            <div key={ind}>
+            <div key={expense.id}>
               <ExpenseItem
-                Title={expenses.title}
-                Date={expenses.date}
-                Amount={expenses.amount}
+                Title={expense.title}
+                Date={expense.date}
+                Amount={expense.amount}
               ></ExpenseItem>
             </div>
           );
