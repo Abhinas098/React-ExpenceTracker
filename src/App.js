@@ -4,6 +4,7 @@ import Expenses from "./Components/Expenses/Expenses";
 import Card from "./Components/UI/Card";
 import NewExpense from "./Components/NewExpenses/NewExpense";
 
+
 const dummyexpenses = [
   {
     id: "e1",
